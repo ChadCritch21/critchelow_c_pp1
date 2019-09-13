@@ -1,0 +1,39 @@
+<?xml version = "1.0"?>
+<project name = "RegExProject1" default="usage" basedir="/home/ccritchelow/critchelow_c_pp1">
+	
+	<target name="clean">
+		<echo> Cleaning the .java file for building...</echo>
+
+		<delete>
+			<fileset dir = ".">
+				<include name = "RegExProject1.class"/>
+			</fileset>
+		</delete>
+
+	</target>
+	
+        <target name="usage">
+	
+		<echo> To execute 'clean' command enter: ant clean.
+		       To execute 'build' command enter: ant build.
+		       To execute 'run' command enter: ant run.
+		       To display this menu again enter: ant or ant usuage.
+
+		</echo>
+
+	</target>
+
+	<target name="run">
+	
+		<echo>Generating the .java file and running your java program... </echo>
+		<java classname="RegExProject1">
+		</java>
+	</target>	
+
+	<target name="build">
+		<echo>Compling the java files for running and execution... </echo>
+		<javac includeantruntime="false" srcdir="." destdir="." />
+	</target>
+
+</project>
+
