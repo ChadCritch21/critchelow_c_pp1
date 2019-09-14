@@ -25,7 +25,7 @@
                    The print flag '0' will print the default output which will be the size of the two hashmaps and the number of parsed lines.
                    The print flag '1' will print IP addresses and how often each appears along with the print flag '0' default output.
                    The print flag '2' will print the usernames and how often each appears along with the print flag '0' default output.
-                   You may change the print flag that's getting passed as an argument by typing "-Darg1=" and either "0,1, or 2" after "run." 
+                   Type "-Darg1=" and either "0,1, or 2" after "run." to change the value passed into arg[1] as print flag.
 
 
 		</echo>
