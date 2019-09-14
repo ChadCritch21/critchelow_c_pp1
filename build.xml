@@ -1,11 +1,13 @@
 <?xml version = "1.0"?>
-<project name = "RegExProject1" default="usage" basedir="/home/ccritchelow/critchelow_c_pp1">
+<project name = "PP1_ANTscript" default="usage" basedir=".">
 	
 	<target name="clean">
-		<echo> Cleaning the .java file for building...</echo>
+		<echo> Cleaning the .java files for building...</echo>
+		<echo> ----------------------------------------</echo>
 
 		<delete>
 			<fileset dir = ".">
+				<include name = "Launcher.class"/>
 				<include name = "RegExProject1.class"/>
 			</fileset>
 		</delete>
@@ -14,10 +16,17 @@
 	
         <target name="usage">
 	
-		<echo> To execute 'clean' command enter: ant clean.
-		       To execute 'build' command enter: ant build.
-		       To execute 'run' command enter: ant run.
-		       To display this menu again enter: ant or ant usuage.
+		<echo>                   To execute 'clean' command enter: "ant clean".
+		       To execute 'build' command enter: "ant build".
+		       To execute 'run' command enter: "ant run".
+		       To display this menu again enter: "ant" or "ant usuage".
+		       
+         	       The program supports three seperate print flags by passing the values: 0,1, or 2 to args[1].
+                   The print flag '0' will print the default output which will be the size of the two hashmaps and the number of parsed lines.
+                   The print flag '1' will print IP addresses and how often each appears along with the print flag '0' default output.
+                   The print flag '2' will print the usernames and how often each appears along with the print flag '0' default output.
+                   You may change the print flag that's getting passed as an argument by typing "-Darg1=" and either "0,1, or 2" after "run." 
+
 
 		</echo>
 
@@ -25,13 +34,17 @@
 
 	<target name="run">
 	
-		<echo>Generating the .java file and running your java program... </echo>
-		<java classname="RegExProject1">
+		<echo>Generating the .java files that have been compilied... </echo>
+		<echo>------------------------------------------------------ </echo>
+		<java classname= "Launcher"  >
+				<arg value= "auth.log"/>
+				<arg value= "${arg1}"/>
 		</java>
 	</target>	
 
 	<target name="build">
-		<echo>Compling the java files for running and execution... </echo>
+		<echo>Compiling the java files for running and execution... </echo>
+		<echo>----------------------------------------------------- </echo>
 		<javac includeantruntime="false" srcdir="." destdir="." />
 	</target>
 
