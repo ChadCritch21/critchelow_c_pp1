@@ -15,24 +15,16 @@ import java.util.HashMap;//java imported class for using hashmaps
 
 public class RegExProject1 {//RegExProject1 class being called from Launcher class. No main method here
 
-	private HashMap<String, Integer> IPaddressHMAP = new HashMap<>();//hashmap object to capture IP Addresses as keys and values for how many appear
-	private HashMap<String, Integer> UsernameHMAP = new HashMap<>();//hashmap object to capture uernames as keys and values for how many appear
-
-	public HashMap<String, Integer> getIPaddressHMAP() {//getting the IP address hashmap to then return the populated hashmap IPaddressHMAP
-		return IPaddressHMAP;
-	}
-
-	public HashMap<String, Integer> getUsernameHMAP() {//getting the usernames hashmap to then return the populated hashmap UsernameHMAP 
+        private HashMap<String, Integer> UsernameHMAP = new HashMap<>();//hashmap object to capture uernames as keys and values for how many appear
+        private HashMap<String, Integer> IPaddressHMAP = new HashMap<>();//hashmap object to capture IP Addresses as keys and values for how many appear
+	
+       	public HashMap<String, Integer> getUsernameHMAP() {//getting the usernames hashmap to then return the populated hashmap UsernameHMAP 
 		return UsernameHMAP;
 	}
 
-	public int getIPaddressHMAPSize() {//getting the size of the IPaddressHMAP as an int for the number of entries
-		return IPaddressHMAP.size();
-	}
-
-	public int getUsernameHMAPSize() {//getting the size of the UsernameHMAP as an int for the number of entries
-		return UsernameHMAP.size();
-	}
+        public HashMap<String, Integer> getIPaddressHMAP() {//getting the IP address hashmap to then return the populated hashmap IPaddressHMAP
+                return IPaddressHMAP;
+        }
 
 	public void RegularExpMatch(String input) {//method for takig the auth.log file and trying to match each line with the regular expressions listed below
 

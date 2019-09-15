@@ -48,8 +48,8 @@ public class Launcher{//Launcher class which contain the main method
                 }
                 
                		System.out.println(Linetracker + " lines in the log file were parsed.");//outputs the default data when arg[1] isn't 1 or 2.
-                	System.out.println("There are " + findPatterns.getIPaddressHMAPSize() + " unique IP addresses in the log.");
-               		System.out.println("There are " + findPatterns.getUsernameHMAPSize() + " unique users in the log.");
+                	System.out.println("There are " + findPatterns.getIPaddressHMAP().size() + " unique IP addresses in the log.");
+               		System.out.println("There are " + findPatterns.getUsernameHMAP().size() + " unique users in the log.");
 
                 }// closing of the main method
  
