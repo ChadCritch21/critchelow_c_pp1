@@ -1,8 +1,8 @@
 /**
  * The Launcher class will scan and parse through the auth.log file passed by args[0]. This class will call upon the RegExProject1 class where
  * various IP addresses and usernames from the auth.log file are parsed and stores both of those data points
- * in a hash map. The class will print off the default information of how many total lines, number of IP address and usernames if args[1] is 0.
- * The IP addresses and how offten they appear will print out if args[1] is 1, and the usernames with how often those appear if args[1] is  2.
+ * in a hash map. The class will print off the default information of how many total lines, number of IP address and usernames if arg[1] is 0.
+ * The IP addresses and how offten they appear will print out if arg[1] is 1, and the usernames with how often those appear if arg[1] is  2.
  * @author Chad Critchelow
  * @version 1.0
  * Programming Project One
@@ -10,7 +10,7 @@
  * Spring 2019
  */
 
-import java.io.File;//importing the needed java class for the program
+import java.io.File;//imported java classes for reading the auth.log file and error exceptions for try/catch
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -23,7 +23,7 @@ public class Launcher{//Launcher class which contain the main method
                 RegExProject1 findPatterns = new RegExProject1();
                 try { //beginning of try/catch
                 
-                        Scanner scan = new Scanner(new File(args[0]));//crating new scanner object from Scanner class
+                        Scanner scan = new Scanner(new File(args[0]));//creating new scanner object from Scanner class
                        
 			 while(scan.hasNextLine()){//beginning while loop until the all lines are scanned
                                 findPatterns.RegularExpMatch(scan.nextLine());//looking for the pattern at each line of the auth.log

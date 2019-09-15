@@ -1,7 +1,7 @@
 /**
- * The class RegExProject1 will parse through the auth.log file passed by the first element is args[] (args[0]). Then, the class will execute into the 
- * RegularExpMatch class to store the  IP addresses and usernames read from the auth.log file into thier respected hash maps for either IP addresses
- * usernames. The print flag used for args[1] will determine the actual output of the program. Seee the class description header for me details on what
+ * The class RegExProject1 will parse through the auth.log file passed by the first element in args[] (args[0]). Then, the class will execute into the 
+ * RegularExpMatch class to store thexIP addresses and usernames read from the auth.log file into thier respected hash maps for either IP addresses
+ * usernames. The print flag used for arg[1] will determine the actual output of the program. Seee the class description header for me details on what
  * each print flag will display.
  * @author Chad Critchelow
  * @version 1.0
@@ -10,8 +10,8 @@
  * Spring 2019
  */
 
-import java.util.regex.*;//java imported classe needed for the program to run
-import java.util.HashMap;
+import java.util.regex.*;//java imported class for using regular expressions
+import java.util.HashMap;//java imported class for using hashmaps
 
 public class RegExProject1 {//RegExProject1 class being called from Launcher class. No main method here
 
