@@ -20,7 +20,7 @@
 		       To execute 'build' command enter: "ant build".
 		       To execute 'run' command enter: "ant run".
 		       To display this menu again enter: "ant" or "ant usuage".
-		       ----------------------------------------------------------------------------------------------------------------------
+		       ---------------------------------------------------------------------------------------------------------------------
          	       The program supports three seperate print flags by passing the values: 0,1, or 2 to arg[1].
                    The print flag '0' will print the default output which will be the size of the two hashmaps and the number of parsed lines.
                    The print flag '1' will print IP addresses and how often each appears along with the print flag '0' default output.
