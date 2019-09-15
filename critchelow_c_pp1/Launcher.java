@@ -51,7 +51,7 @@ public class Launcher{//Launcher class which contain the main method
                 	System.out.println("There are " + findPatterns.getIPaddressHMAP().size() + " unique IP addresses in the log.");
                		System.out.println("There are " + findPatterns.getUsernameHMAP().size() + " unique users in the log.");
 
-                }// closing of the main method
+                }// closing of the Main method
  
                 }// closing of the Launcher class
 
