@@ -1,6 +1,6 @@
 /**
  * The class RegExProject1 will parse through the auth.log file passed by the first element in args[] (args[0]). Then, the class will execute into the 
- * RegularExpMatch class to store thexIP addresses and usernames read from the auth.log file into thier respected hash maps for either IP addresses
+ * RegularExpMatch class to store the IP addresses and usernames read from the auth.log file into thier respected hash maps for either IP addresses
  * usernames. The print flag used for arg[1] will determine the actual output of the program. Seee the class description header for me details on what
  * each print flag will display.
  * @author Chad Critchelow
