@@ -1,0 +1,52 @@
+<?xml version = "1.0"?>
+<project name = "PP1_ANTscript" default="usage" basedir=".">
+	
+	<target name="clean">
+		<echo> Cleaning the .java files for building...</echo>
+		<echo> ----------------------------------------</echo>
+
+		<delete>
+			<fileset dir = ".">
+				<include name = "Launcher.class"/>
+				<include name = "RegExProject1.class"/>
+			</fileset>
+		</delete>
+
+	</target>
+	
+        <target name="usage">
+	
+		<echo>                   To execute 'clean' command enter: "ant clean".
+		       To execute 'build' command enter: "ant build".
+		       To execute 'run' command enter: "ant run".
+		       To display this menu again enter: "ant" or "ant usuage".
+		       
+         	       The program supports three seperate print flags by passing the values: 0,1, or 2 to args[1].
+                   The print flag '0' will print the default output which will be the size of the two hashmaps and the number of parsed lines.
+                   The print flag '1' will print IP addresses and how often each appears along with the print flag '0' default output.
+                   The print flag '2' will print the usernames and how often each appears along with the print flag '0' default output.
+                   Type "-Darg1=" and either "0,1, or 2" after "run." to change the value passed into arg[1] as print flag.
+
+
+		</echo>
+
+	</target>
+
+	<target name="run">
+	
+		<echo>Generating the .java files that have been compilied... </echo>
+		<echo>------------------------------------------------------ </echo>
+		<java classname= "Launcher"  >
+				<arg value= "auth.log"/>
+				<arg value= "${arg1}"/>
+		</java>
+	</target>	
+
+	<target name="build">
+		<echo>Compiling the java files for running and execution... </echo>
+		<echo>----------------------------------------------------- </echo>
+		<javac includeantruntime="false" srcdir="." destdir="." />
+	</target>
+
+</project>
+
